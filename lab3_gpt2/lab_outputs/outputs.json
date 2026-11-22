@@ -1,0 +1,102 @@
+{
+  "seed": 42,
+  "device": "cuda",
+  "trainable_params": 7087872,
+  "total_params": 124439808,
+  "decoding": [
+    {
+      "prompt": "A story about a robot begins like this:",
+      "setting": "greedy",
+      "seed": null,
+      "text": "A robot is a robot that is programmed to do something. It is programmed to do something. It is programmed to do something. It is programmed to do something. It is programmed to do something. It is programmed"
+    },
+    {
+      "prompt": "A story about a robot begins like this:",
+      "setting": "temp 0.6",
+      "seed": 42,
+      "text": "I was in my basement, and a guy came in, and he said, \"Hey, we're going to be building a robot. Let's go, and we're going to be building a robot that's"
+    },
+    {
+      "prompt": "A story about a robot begins like this:",
+      "setting": "temp 0.6",
+      "seed": 43,
+      "text": "A robot is a computer program that, when programmed to perform certain tasks, will perform the job.\n\nA robot is not a computer program.\n\nA robot is not a computer program.\n\nA"
+    },
+    {
+      "prompt": "A story about a robot begins like this:",
+      "setting": "temp 1.0",
+      "seed": 42,
+      "text": "It was supposed to be something big, but it never happened. It was called a toy, but no one liked it because it wasn't the most interesting thing in the universe, even though it was a real thing. But"
+    },
+    {
+      "prompt": "A story about a robot begins like this:",
+      "setting": "temp 1.0",
+      "seed": 43,
+      "text": "A robotic girl runs into a strange, alien world called \"Rome.\"\n\nRome's \"Sculpture of Chaos\" is where she's found. She asks for a special artifact from the \""
+    },
+    {
+      "prompt": "In a school library, a tiny robot found a lost book. It",
+      "setting": "greedy",
+      "seed": null,
+      "text": "was a book that had been lost for years.\n\n\"I was like, 'Oh my God, this is so weird,'\" said the boy, who asked not to be identified. \"I was like, 'Oh"
+    },
+    {
+      "prompt": "In a school library, a tiny robot found a lost book. It",
+      "setting": "temp 0.6",
+      "seed": 42,
+      "text": "was the only book in the library, and it was the only one that had been lost in the war. The robot was not the only one who had lost his book. The other two books were the ones that had been"
+    },
+    {
+      "prompt": "In a school library, a tiny robot found a lost book. It",
+      "setting": "temp 0.6",
+      "seed": 43,
+      "text": "was a book with a name: \"The Book of the Dead.\"\n\nThe book was the book of the dead. The book of the dead.\n\nA few days later, the robot went missing."
+    },
+    {
+      "prompt": "In a school library, a tiny robot found a lost book. It",
+      "setting": "temp 1.0",
+      "seed": 42,
+      "text": "was the only book in its collection, and had never been in a class of its own, let alone the library's. A dozen books stood on the shelf, each a different class of books. One was named after him"
+    },
+    {
+      "prompt": "In a school library, a tiny robot found a lost book. It",
+      "setting": "temp 1.0",
+      "seed": 43,
+      "text": "knew that the book belonged to a man named David, who had been captured by aliens with a key. He thought that he was going to be able to rescue David's lost companion, but he would need an amazing source of"
+    }
+  ],
+  "finetune_losses": [
+    {
+      "epoch": 1,
+      "last": 4.759,
+      "mean": 5.159
+    },
+    {
+      "epoch": 2,
+      "last": 4.328,
+      "mean": 4.876
+    },
+    {
+      "epoch": 3,
+      "last": 4.724,
+      "mean": 5.178
+    }
+  ],
+  "heldout": [
+    {
+      "topic": "recursion",
+      "base": "Use the recursion keyword to define a new type of recursion.\n\nExample:\n\nclass Recursion { public: Recursion(int i) { return i; } public: Recursion(int i)",
+      "tuned": "Use the recursion keyword to define a new type of recursion.\n\nExample:\n\nclass Recursion { public: Recursion(int x, int y) { return x + y; } public: Rec"
+    },
+    {
+      "topic": "matrices",
+      "base": "Use the matrices to create a matrix of the same size as the input.\n\nThe following matrix is a matrix of the same size as the input.\n\nThe following matrix is a matrix of the same size as",
+      "tuned": "Use the matrices to create a matrix of the same size as the input.\n\nThe following matrix is a matrix of the same size as the input.\n\nThe following matrix is a matrix of the same size as"
+    },
+    {
+      "topic": "binary search",
+      "base": "Use the search box to find the search term you want to search for.\n\nStudy tip: Use the search box to find the search term you want to search for.\n\nStudy tip: Use the search box to",
+      "tuned": "Use the search box to find the search term you want to search for.\n\nStudy tip: Use the search box to find the search term you want to search for.\n\nStudy tip: Use the search box to"
+    }
+  ]
+}

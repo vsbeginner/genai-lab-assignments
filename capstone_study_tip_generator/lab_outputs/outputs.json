@@ -1,0 +1,62 @@
+[
+  {
+    "topic": "recursion",
+    "base": "Use the recursion keyword to define a new type of recursion.\n\nExample:\n\nclass Recursion { public: Recursion(int i) { return i; } public: Recursion(int i)",
+    "adapted": "Draw a small tree with a root and test it with three children."
+  },
+  {
+    "topic": "matrices",
+    "base": "Use the matrices to create a matrix of the same size as the input.\n\nThe following matrix is a matrix of the same size as the input.\n\nThe following matrix is a matrix of the same size as",
+    "adapted": "Draw the points as you see fit."
+  },
+  {
+    "topic": "binary search",
+    "base": "Use the search box to find the search term you want to search for.\n\nStudy tip: Use the search box to find the search term you want to search for.\n\nStudy tip: Use the search box to",
+    "adapted": "Look for two values before looking at the expression result."
+  },
+  {
+    "topic": "linked lists",
+    "base": "Use the link below to share your research.\n\nThis article was originally published on The Conversation. Read the original article.",
+    "adapted": "List the three numbers first and compare it with three numbers that match the first and last items."
+  },
+  {
+    "topic": "SQL joins",
+    "base": "Use the join-by-name option to join a table.\n\nStudy tip: Use the join-by-name option to join a table. Study tip: Use the join-by-name option to join a",
+    "adapted": "List the three columns you need to join the table."
+  },
+  {
+    "topic": "stacks and queues",
+    "base": "If you're using a queue, you should use the same queue as the one you're using for the data.\n\nThe data is stored in a queue.\n\nThe data is stored in a queue. The data",
+    "adapted": "Fill in the numbers for two variables and print the result."
+  },
+  {
+    "topic": "hash tables",
+    "base": "Use the hash table to find the most common hash tables.\n\nThe hash table is a set of tables that are used to store the data in a database. The table is used to store the data in a database.",
+    "adapted": "Store three names with the same key before you open a hash table."
+  },
+  {
+    "topic": "Big O notation",
+    "base": "Use the following notation to write your own notation:\n\n1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1",
+    "adapted": "Draw the root letter of each cell you can mark."
+  },
+  {
+    "topic": "Git branches",
+    "base": "Use the Git branch to create a new branch.\nStudy tip: Use the Git branch to create a new branch.\nStudy tip: Use the Git branch to create a new branch.\nStudy tip: Use the Git",
+    "adapted": "Build a branch with one or two branches, then open it in a new tab."
+  },
+  {
+    "topic": "derivatives",
+    "base": "If you're looking for a way to make a profit, you might want to look at the derivatives market.\n\nSource: http://www.bibdsl.co.uk/w10-images/l",
+    "adapted": "Swap one swap for one swap."
+  },
+  {
+    "topic": "standard deviation",
+    "base": "Use the \"standard deviation\" to determine the standard deviation of the data.\n\nSource: National Center for Health Statistics, Centers for Disease Control and Prevention.\n\nThe study was funded by the National Institutes of Health (",
+    "adapted": "Sort the numbers first and compare the scores."
+  },
+  {
+    "topic": "object-oriented programming",
+    "base": "Use the following to create a class that will be used to create a class that will be used to create a class that will be used to create a class that will be used to create a class that will be used to create",
+    "adapted": "Open a new issue of the subject and open a new issue of one of the following topics in one of the following order."
+  }
+]

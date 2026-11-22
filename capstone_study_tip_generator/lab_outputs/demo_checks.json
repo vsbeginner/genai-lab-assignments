@@ -1,0 +1,15 @@
+{
+  "empty_topic_warning": [
+    "Enter a study topic first."
+  ],
+  "empty_topic_generated_text": [],
+  "recursion": [
+    "Draw a small tree with a root and test it with three children."
+  ],
+  "SQL joins": [
+    "List the three columns you need to join the table."
+  ],
+  "whitespace_only_warning": [
+    "Enter a study topic first."
+  ]
+}

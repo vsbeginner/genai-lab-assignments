@@ -1,0 +1,28 @@
+# ==============================================================================
+# Generative AI & Deep Probabilistic Models - Environment Requirements
+# ==============================================================================
+# Verified on Python 3.10+ / 3.11 / 3.12 / 3.14 on CUDA 12.x / CPU
+#
+# NOTE ON PYTORCH INSTALLATION:
+# Install PyTorch with your platform-specific CUDA support first:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+# Or for CPU-only execution:
+#   pip install torch torchvision
+# ==============================================================================
+
+# Core Scientific & Data Visualization
+numpy>=1.26.0,<3.0.0
+matplotlib>=3.8.0,<4.0.0
+pillow>=10.0.0,<14.0.0
+
+# Hugging Face Transformers & Model Hub
+transformers>=4.48.0,<5.0.0
+huggingface_hub>=0.25.0,<1.0.0
+accelerate>=0.30.0,<2.0.0
+safetensors>=0.4.0,<1.0.0
+
+# Diffusion Models Pipeline
+diffusers>=0.30.0,<1.0.0
+
+# Interactive Demonstration Application & Testing
+streamlit>=1.35.0,<2.0.0

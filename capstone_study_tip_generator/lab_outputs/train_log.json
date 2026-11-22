@@ -1,0 +1,48 @@
+{
+  "seed": 42,
+  "epochs": 10,
+  "lr": 0.0001,
+  "train_size": 40,
+  "log": [
+    {
+      "epoch": 1,
+      "mean_loss": 4.399
+    },
+    {
+      "epoch": 2,
+      "mean_loss": 3.771
+    },
+    {
+      "epoch": 3,
+      "mean_loss": 3.441
+    },
+    {
+      "epoch": 4,
+      "mean_loss": 3.069
+    },
+    {
+      "epoch": 5,
+      "mean_loss": 2.725
+    },
+    {
+      "epoch": 6,
+      "mean_loss": 2.397
+    },
+    {
+      "epoch": 7,
+      "mean_loss": 1.998
+    },
+    {
+      "epoch": 8,
+      "mean_loss": 1.811
+    },
+    {
+      "epoch": 9,
+      "mean_loss": 1.483
+    },
+    {
+      "epoch": 10,
+      "mean_loss": 1.227
+    }
+  ]
+}

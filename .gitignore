@@ -1,0 +1,39 @@
+# ==============================================================================
+# Git Ignore Configuration - Generative AI Laboratory Portfolio
+# ==============================================================================
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Torchvision Datasets (downloaded automatically at runtime, ~145 MB)
+# Anchored to repository root so capstone_study_tip_generator/data remains tracked
+/data/
+
+# Model Checkpoints & Large Weight Files (>50 MB)
+# GPT-2 fine-tuned checkpoints (~475 MB each) are reproducible via training scripts
+*.safetensors
+**/study_tip_gpt2/
+*.bin
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Operating System & Editor Files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo

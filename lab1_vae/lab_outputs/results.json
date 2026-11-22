@@ -1,0 +1,67 @@
+{
+  "device": "cuda",
+  "seed": 42,
+  "epochs": [
+    {
+      "epoch": 1,
+      "reconstruction": 188.49,
+      "kl": 6.67,
+      "total": 195.16
+    },
+    {
+      "epoch": 2,
+      "reconstruction": 164.56,
+      "kl": 5.31,
+      "total": 169.87
+    },
+    {
+      "epoch": 3,
+      "reconstruction": 159.61,
+      "kl": 5.38,
+      "total": 164.99
+    },
+    {
+      "epoch": 4,
+      "reconstruction": 156.85,
+      "kl": 5.46,
+      "total": 162.31
+    },
+    {
+      "epoch": 5,
+      "reconstruction": 154.99,
+      "kl": 5.53,
+      "total": 160.52
+    }
+  ],
+  "heldout_loss_per_image": {
+    "reconstruction": 153.76,
+    "kl": 5.7
+  },
+  "closest_centroids": [
+    [
+      5,
+      8,
+      0.04
+    ],
+    [
+      3,
+      8,
+      0.375
+    ],
+    [
+      4,
+      9,
+      0.379
+    ],
+    [
+      3,
+      5,
+      0.414
+    ],
+    [
+      2,
+      6,
+      0.447
+    ]
+  ]
+}

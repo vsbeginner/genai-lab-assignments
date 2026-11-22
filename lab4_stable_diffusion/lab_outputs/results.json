@@ -1,0 +1,42 @@
+{
+  "repo": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+  "settings": {
+    "width": 512,
+    "height": 512,
+    "steps": 25,
+    "guidance_scale": 7.5,
+    "dtype": "float16"
+  },
+  "runs": [
+    {
+      "prompt": "A small library with a reading table, wide view, watercolor illustration",
+      "seed": 42,
+      "flagged": false,
+      "file": "library_prompt_1_seed_42.png",
+      "seconds": 10.4
+    },
+    {
+      "prompt": "A small library with a reading table, wide view, watercolor illustration",
+      "seed": 43,
+      "flagged": false,
+      "file": "library_prompt_1_seed_43.png",
+      "seconds": 8.0
+    },
+    {
+      "prompt": "A small library with a reading table, wide view, pencil sketch",
+      "seed": 42,
+      "flagged": false,
+      "file": "library_prompt_2_seed_42.png",
+      "seconds": 8.0
+    },
+    {
+      "prompt": "A small library with a reading table, wide view, pencil sketch",
+      "seed": 43,
+      "flagged": false,
+      "file": "library_prompt_2_seed_43.png",
+      "seconds": 8.1
+    }
+  ]
+}

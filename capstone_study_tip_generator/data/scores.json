@@ -1,0 +1,50 @@
+{
+  "recursion": {
+    "base": [1, 1, 0, "Names the topic, then slides into C++ style code. Not advice."],
+    "adapted": [1, 2, 1, "Clean sentence about drawing a tree with children. Loosely fits recursion but copied from the training tip on trees."]
+  },
+  "matrices": {
+    "base": [1, 1, 0, "Vague and repeats one sentence."],
+    "adapted": [0, 1, 0, "'Draw the points as you see fit.' Nothing about matrices."]
+  },
+  "binary search": {
+    "base": [0, 1, 0, "Talks about a website search box and repeats itself."],
+    "adapted": [1, 1, 0, "'Look for two values' hints at searching but the rest is unrelated."]
+  },
+  "linked lists": {
+    "base": [0, 1, 0, "Boilerplate from a news article."],
+    "adapted": [1, 1, 0, "Mentions lists and first and last items but the sentence is muddled."]
+  },
+  "SQL joins": {
+    "base": [1, 1, 0, "Mentions join and table but loops on the same sentence."],
+    "adapted": [2, 2, 1, "Short, on topic and actionable. Best output of the set, though 'join the table' is imprecise."]
+  },
+  "stacks and queues": {
+    "base": [1, 1, 0, "Talks about a queue, then repeats a sentence about data."],
+    "adapted": [0, 2, 0, "Readable but unrelated ('print the result')."]
+  },
+  "hash tables": {
+    "base": [1, 1, 0, "Circular definition of a hash table."],
+    "adapted": [2, 2, 1, "Stores names under a key, which is the right idea. 'Same key' would cause a collision though, so a reviewer should fix it."]
+  },
+  "Big O notation": {
+    "base": [0, 0, 0, "A run of '1.1.1.1...' characters."],
+    "adapted": [0, 1, 0, "Nonsense about root letters and cells."]
+  },
+  "Git branches": {
+    "base": [2, 1, 1, "Right topic and plausible, but it repeats the 'Study tip:' line again and again."],
+    "adapted": [1, 1, 0, "Circular ('build a branch with one or two branches')."]
+  },
+  "derivatives": {
+    "base": [0, 1, 0, "Talks about the derivatives market and a source URL."],
+    "adapted": [0, 0, 0, "'Swap one swap for one swap.' Meaningless."]
+  },
+  "standard deviation": {
+    "base": [1, 1, 0, "Uses the term but drifts into a health survey citation."],
+    "adapted": [1, 2, 1, "Short and sensible as a first step ('sort the numbers'), though it does not mention spread."]
+  },
+  "object-oriented programming": {
+    "base": [1, 0, 0, "Repeating 'a class that will be used to create' loop."],
+    "adapted": [0, 0, 0, "Rambling about opening new issues. Meaningless."]
+  }
+}
