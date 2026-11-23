@@ -70,125 +70,135 @@ def load_pedagogical_knowledge_base() -> Tuple[Dict[str, str], Dict[str, Dict[st
 
 
 # -----------------------------------------------------------------------------
-# Page Configuration & White/Green/Black Theme Styling
+# Page Configuration & Clean Website Theme (White Background + Green Headings)
 # -----------------------------------------------------------------------------
 st.set_page_config(
-    page_title="Study Tip Generator | AI Demo",
-    page_icon="⚡",
+    page_title="Study Tip Generator | AI Platform",
+    page_icon="🌿",
     layout="wide",
     initial_sidebar_state="expanded",
 )
 
 st.markdown("""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
-    /* Color Palette: Pure Black, Crisp White, Vibrant Emerald Green */
-    :root {
-        --bg-black: #000000;
-        --bg-card: #0D120F;
-        --border-green: #1A2E22;
-        --accent-green: #10B981;
-        --accent-green-bright: #00E676;
-        --text-white: #FFFFFF;
-        --text-dim: #9CA3AF;
-    }
+    /* ==========================================================================
+       Website Theme: Crisp White Background & Vibrant Emerald Green Headings
+       ========================================================================== */
 
-    /* Background and Global Typography */
+    /* Global Background and Typography */
     html, body, [data-testid="stAppViewContainer"], [data-testid="stHeader"] {
-        background-color: #000000 !important;
-        color: #FFFFFF !important;
-        font-family: 'Inter', -apple-system, sans-serif;
+        background-color: #FFFFFF !important;
+        color: #1F2937 !important;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     [data-testid="stSidebar"] {
-        background-color: #080C09 !important;
-        border-right: 1px solid #1A2E22 !important;
+        background-color: #F8FAF9 !important;
+        border-right: 1px solid #E5E9E7 !important;
     }
 
-    /* Headings */
+    /* All Headings in Emerald Green */
     h1, h2, h3, h4, h5, h6 {
-        color: #FFFFFF !important;
-        font-weight: 700;
-        letter-spacing: -0.02em;
+        color: #059669 !important;
+        font-weight: 700 !important;
+        letter-spacing: -0.025em;
     }
 
-    /* Action Button: Emerald Green with High-Contrast Black Text */
+    /* Subtitles and Body Paragraphs */
+    p, span, label {
+        color: #374151 !important;
+    }
+
+    /* Primary Action Button: Forest Emerald Green with Crisp White Text */
     div.stButton > button:first-child {
-        background-color: #10B981 !important;
-        color: #000000 !important;
-        font-weight: 700 !important;
+        background-color: #059669 !important;
+        color: #FFFFFF !important;
+        font-weight: 600 !important;
         border: none !important;
         border-radius: 8px !important;
         padding: 0.65rem 1.6rem !important;
         font-size: 0.95rem !important;
+        box-shadow: 0 1px 3px rgba(5, 150, 105, 0.25) !important;
         transition: all 0.2s ease-in-out;
     }
     div.stButton > button:first-child:hover {
-        background-color: #00E676 !important;
-        color: #000000 !important;
-        box-shadow: 0 0 18px rgba(16, 185, 129, 0.55);
+        background-color: #047857 !important;
+        color: #FFFFFF !important;
+        box-shadow: 0 4px 12px rgba(5, 150, 105, 0.35) !important;
+        transform: translateY(-1px);
     }
 
-    /* Metric Cards: Black background with Emerald Green border */
+    /* Modern Metric Cards: Crisp white card with subtle green accent border */
     [data-testid="stMetric"] {
-        background-color: #0D120F !important;
-        border: 1px solid #1A2E22 !important;
+        background-color: #FFFFFF !important;
+        border: 1px solid #E5E9E7 !important;
+        border-top: 3px solid #059669 !important;
         border-radius: 8px !important;
         padding: 14px 18px !important;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04) !important;
     }
     [data-testid="stMetricLabel"] {
-        color: #9CA3AF !important;
+        color: #6B7280 !important;
         font-size: 0.85rem !important;
-        font-weight: 500;
+        font-weight: 500 !important;
     }
     [data-testid="stMetricValue"] {
-        color: #FFFFFF !important;
+        color: #111827 !important;
         font-weight: 700 !important;
     }
     [data-testid="stMetricDelta"] svg {
-        fill: #10B981 !important;
+        fill: #059669 !important;
     }
     [data-testid="stMetricDelta"] {
-        color: #10B981 !important;
-        font-weight: 600;
+        color: #059669 !important;
+        font-weight: 600 !important;
     }
 
-    /* Input & Selectbox Styling */
+    /* Input & Select Fields */
     input[type="text"], .stTextInput > div > div > input, [data-baseweb="select"] {
-        background-color: #0D120F !important;
-        color: #FFFFFF !important;
-        border: 1px solid #1A2E22 !important;
+        background-color: #FFFFFF !important;
+        color: #111827 !important;
+        border: 1px solid #D1D5DB !important;
         border-radius: 8px !important;
     }
     input[type="text"]:focus, .stTextInput > div > div > input:focus {
-        border-color: #10B981 !important;
-        box-shadow: 0 0 0 1px #10B981 !important;
+        border-color: #059669 !important;
+        box-shadow: 0 0 0 2px rgba(5, 150, 105, 0.15) !important;
     }
 
-    /* Tabs */
+    /* Tabs Styled as Website Navigation Bar */
+    div[data-baseweb="tab-list"] {
+        border-bottom: 2px solid #E5E7EB !important;
+        background-color: transparent !important;
+    }
     button[data-baseweb="tab"] {
-        color: #9CA3AF !important;
+        color: #4B5563 !important;
         font-weight: 600 !important;
-        padding: 0.6rem 1.2rem !important;
+        font-size: 0.95rem !important;
+        padding: 0.75rem 1.4rem !important;
+        background: transparent !important;
     }
     button[aria-selected="true"][data-baseweb="tab"] {
-        color: #10B981 !important;
-        border-bottom-color: #10B981 !important;
+        color: #059669 !important;
+        border-bottom: 3px solid #059669 !important;
     }
 
-    /* Containers & Expanders */
+    /* Card Containers & Expanders */
     div[data-testid="stExpander"], [data-testid="stVerticalBlockBorderWrapper"] {
-        background-color: #0D120F !important;
-        border-color: #1A2E22 !important;
+        background-color: #FFFFFF !important;
+        border: 1px solid #E5E9E7 !important;
         border-radius: 8px !important;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
     }
 
     /* Code & Output Blocks */
     code, pre {
         font-family: 'JetBrains Mono', monospace !important;
-        background-color: #0A140F !important;
-        color: #00E676 !important;
+        background-color: #F3F4F6 !important;
+        color: #047857 !important;
+        border-radius: 4px !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -243,35 +253,34 @@ def synthesize_study_tip(topic: str) -> Tuple[str, Dict[str, str] | None]:
 
 
 # -----------------------------------------------------------------------------
-# Sidebar: System & Telemetry (No Academic Text)
+# Sidebar: Clean Telemetry & Developer Name Only (No Links)
 # -----------------------------------------------------------------------------
 with st.sidebar:
-    st.markdown("### ⚡ System Status")
+    st.markdown("### 🌿 System Telemetry")
     if is_local_weights_present:
-        st.success("🟢 PyTorch PEFT Engine Active")
+        st.success("● Engine: PyTorch PEFT Active")
     else:
-        st.info("🟢 High-Speed Interactive Engine Active")
+        st.info("● Engine: Interactive Engine Active")
 
-    st.markdown("**Architecture**: GPT-2 (124M)")
-    st.markdown("**PEFT Adapter**: Block 11 (`h[-1]`)")
-    st.markdown("**Trainable Parameters**: 7.08M (5.69%)")
-    st.markdown("**Decoding**: Deterministic Greedy Search")
+    st.markdown("**Model Architecture**: GPT-2 (124M)")
+    st.markdown("**Adaptation Layer**: Block 11 (`h[-1]`)")
+    st.markdown("**Trainable Subset**: 7.08M (5.69%)")
+    st.markdown("**Inference Mode**: Greedy Deterministic")
     st.divider()
 
-    st.markdown("### 🔗 Links")
-    st.markdown("[GitHub Repository](https://github.com/vsbeginner/genai-lab-assignments)")
-    st.markdown("[Developer Profile](https://github.com/vsbeginner)")
+    st.markdown("### 👤 Author")
+    st.markdown("**Vinayak Sharma**")
     st.divider()
 
     st.caption("AI-generated scaffolding. Expert human review recommended.")
 
 
 # -----------------------------------------------------------------------------
-# Header & Key Metrics
+# Website Header & Metric Highlights
 # -----------------------------------------------------------------------------
-st.title("⚡ Domain-Adapted Study Tip Generator")
+st.title("Study Tip Generator")
 st.markdown(
-    "**Fine-Tuned GPT-2 (PEFT Block 11)** · Generates concise single-sentence learning directives."
+    "**Domain-Adapted Generative AI Platform** · Synthesizes concise single-sentence learning directives."
 )
 
 m1, m2, m3, m4 = st.columns(4)
@@ -287,7 +296,7 @@ with m4:
 st.divider()
 
 # -----------------------------------------------------------------------------
-# Main Tabs: Fast, Practical, Product-Driven
+# Navigation Tabs
 # -----------------------------------------------------------------------------
 tab_demo, tab_scores, tab_arch = st.tabs([
     "🚀 Generator Studio",
@@ -348,12 +357,12 @@ with tab_demo:
                 c1, c2 = st.columns(2)
                 with c1:
                     with st.container(border=True):
-                        st.markdown("**🔴 Base GPT-2 (Zero-Shot)**")
+                        st.markdown("#### 🔴 Base GPT-2 (Zero-Shot)")
                         st.caption(f'"{comparative_data.get("base", "N/A")}"')
                         st.error("Observed: Repetitive loops, unformatted dumps, non-actionable.")
                 with c2:
                     with st.container(border=True):
-                        st.markdown("**🟢 Adapted GPT-2 (Block 11 PEFT)**")
+                        st.markdown("#### 🟢 Adapted GPT-2 (Block 11 PEFT)")
                         st.caption(f'"{comparative_data.get("adapted", "N/A")}"')
                         st.success("Observed: Concise imperative command, active pedagogical scaffolding.")
 
@@ -397,16 +406,23 @@ with tab_scores:
     st.line_chart(data=loss_data, x="Epoch", y="Loss")
 
 # -----------------------------------------------------------------------------
-# TAB 3: Architecture Summary (Concise & Technical)
+# TAB 3: Architecture Summary & Author (No Links)
 # -----------------------------------------------------------------------------
 with tab_arch:
-    st.subheader("Technical Pipeline Overview")
-    with st.container(border=True):
-        st.markdown(
-            "- **Architecture**: 124M parameter GPT-2 Transformer Decoder.  \n"
-            "- **PEFT Scheme**: Freeze Blocks 0–10; unfreeze Block 11 (`h[-1]`).  \n"
-            "- **Trainable Subset**: Only 7.08M parameters (5.69%), saving 94% memory.  \n"
-            "- **Target Task**: Convert technical terms into single-sentence study tips.  \n"
-            "- **Key Metric**: +50.6% readability improvement over zero-shot base model.  \n"
-            "- **Inference**: Sub-second deterministic greedy decoding."
-        )
+    c_arch, c_author = st.columns([2, 1])
+    with c_arch:
+        st.subheader("Technical Pipeline Overview")
+        with st.container(border=True):
+            st.markdown(
+                "- **Architecture**: 124M parameter GPT-2 Transformer Decoder.  \n"
+                "- **PEFT Scheme**: Freeze Blocks 0–10; unfreeze Block 11 (`h[-1]`).  \n"
+                "- **Trainable Subset**: Only 7.08M parameters (5.69%), saving 94% memory.  \n"
+                "- **Target Task**: Convert technical terms into single-sentence study tips.  \n"
+                "- **Key Metric**: +50.6% readability improvement over zero-shot base model.  \n"
+                "- **Inference**: Sub-second deterministic greedy decoding."
+            )
+    with c_author:
+        st.subheader("Author")
+        with st.container(border=True):
+            st.markdown("### Vinayak Sharma")
+            st.caption("Software & Machine Learning Engineer")
