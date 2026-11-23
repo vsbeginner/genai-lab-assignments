@@ -1,9 +1,14 @@
 # Capstone Project: Domain-Adapted Study Tip Generator
 ### Generative AI Creative Solution for Pedagogical Scaffolding
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://vsbeginner-genai-study-tip.streamlit.app)
+[![Live Demo](https://img.shields.io/badge/Streamlit-Live%20Demo-FF4B4B.svg?style=for-the-badge&logo=streamlit&logoColor=white)](https://vsbeginner-genai-study-tip.streamlit.app)
+
 **Course Code**: ETMMGA304 — Generative AI and Its Applications  
 **Academic Program**: Master of Computer Applications (MCA)  
 **Institution**: K.R. Mangalam University  
+**Candidate**: Vinayak Sharma ([@vsbeginner](https://github.com/vsbeginner))  
+**Live Interactive Studio**: [https://vsbeginner-genai-study-tip.streamlit.app](https://vsbeginner-genai-study-tip.streamlit.app)  
 **Pedagogical Taxonomy**: BTX 4 (Analyze), BTX 5 (Evaluate) & BTX 6 (Create)  
 
 ---
@@ -169,6 +174,8 @@ Aggregated across all 12 held-out evaluation topics:
 
 ### 5.1 Web Application Architecture (`app.py`)
 The demonstration interface is built using Streamlit, featuring:
+- **Public Live Deployment**: [https://vsbeginner-genai-study-tip.streamlit.app](https://vsbeginner-genai-study-tip.streamlit.app)
+- **Executive Recruiter Studio**: Tabbed interface featuring Live Generation Studio, Held-Out Benchmark Scorecard, Architectural Deep-Dive, and Viva-Voce Technical Q&A.
 - **Resilient Dual-Mode Engine**: Operates with zero setup latency using an intelligent pre-computed benchmark lookup engine (all 52 training and held-out pairs), and seamlessly mounts local fine-tuned PyTorch checkpoint (`study_tip_gpt2`) if available.
 - **Fast Execution & Interactive Presets**: Interactive selector with benchmark quick-picks (`recursion`, `SQL joins`, `binary search`, etc.) and side-by-side empirical comparison cards (Base GPT-2 vs Adapted PEFT).
 - In-memory model caching via `@st.cache_data` for sub-second responses.
@@ -177,11 +184,13 @@ The demonstration interface is built using Streamlit, featuring:
 - Prominent pedagogical disclosure notices and PII warnings.
 
 #### Launching the Application
+- 🌐 **Live Cloud Demo**: [https://vsbeginner-genai-study-tip.streamlit.app](https://vsbeginner-genai-study-tip.streamlit.app)
+- 💻 **Local Launch**:
 ```bash
 # Navigate to capstone directory
 cd capstone_study_tip_generator
 
-# Launch Streamlit web app
+# Launch Streamlit web app locally
 python -m streamlit run app.py
 
 # Or execute headless CI/CD test harness
