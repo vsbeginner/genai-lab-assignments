@@ -541,21 +541,21 @@ st.markdown("""
     }
 
     [data-testid="stSidebar"], [data-testid="stSidebarContent"] {
-        background-color: #0B0F0D !important;
-        border-right: 1px solid #1A2E22 !important;
+        background-color: #F8FAF9 !important;
+        border-right: 1px solid #E5E9E7 !important;
     }
 
-    /* 2. Floating Dock Container in Left Sidebar */
+    /* 2. Floating Dock Container in Left Sidebar (Theme-Matched Light & Emerald) */
     .sidebar-dock-card {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 18px 12px;
-        background: #111815;
-        border: 1px solid #1F3628;
-        border-radius: 24px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        padding: 20px 14px;
+        background: #FFFFFF;
+        border: 1.5px solid #D1FAE5;
+        border-radius: 20px;
+        box-shadow: 0 4px 16px rgba(5, 150, 105, 0.08);
         margin-bottom: 20px;
     }
 
@@ -565,14 +565,14 @@ st.markdown("""
         height: 82px;
         border-radius: 50%;
         border: 2.5px solid #059669;
-        box-shadow: 0 0 16px rgba(5, 150, 105, 0.55);
+        box-shadow: 0 0 14px rgba(5, 150, 105, 0.35);
         padding: 2px;
-        background: #080C0A;
+        background: #FFFFFF;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
     }
 
     .avatar-glow-ring img {
@@ -583,18 +583,18 @@ st.markdown("""
     }
 
     .sidebar-author-title {
-        color: #FFFFFF !important;
+        color: #111827 !important;
         font-weight: 700;
-        font-size: 1.05rem;
+        font-size: 1.1rem;
         margin-top: 4px;
         letter-spacing: -0.01em;
     }
 
     .sidebar-author-subtitle {
-        color: #10B981 !important;
+        color: #059669 !important;
         font-size: 0.78rem;
-        font-weight: 600;
-        letter-spacing: 0.05em;
+        font-weight: 700;
+        letter-spacing: 0.06em;
         text-transform: uppercase;
         margin-top: 2px;
     }
@@ -616,18 +616,29 @@ st.markdown("""
         color: #374151 !important;
     }
 
-    /* Left Sidebar Text forced light/readable on dark dock */
+    /* Left Sidebar Text matched to theme */
     [data-testid="stSidebar"] p,
     [data-testid="stSidebar"] span,
-    [data-testid="stSidebar"] label,
-    [data-testid="stSidebar"] div {
-        color: #D1D5DB !important;
+    [data-testid="stSidebar"] label {
+        color: #374151 !important;
+    }
+    [data-testid="stSidebar"] strong {
+        color: #111827 !important;
     }
     [data-testid="stSidebar"] h1,
     [data-testid="stSidebar"] h2,
     [data-testid="stSidebar"] h3,
     [data-testid="stSidebar"] h4 {
-        color: #10B981 !important;
+        color: #059669 !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stAlert"] {
+        background-color: #ECFDF5 !important;
+        border: 1px solid #A7F3D0 !important;
+        border-radius: 10px !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stAlert"] * {
+        color: #065F46 !important;
+        font-weight: 600 !important;
     }
 
     /* 5. Action Buttons (Vibrant Green with White Text) */
@@ -859,7 +870,7 @@ with st.sidebar:
         unsafe_allow_html=True,
     )
 
-    st.markdown("### 🌿 System Telemetry")
+    st.markdown("### System Telemetry")
     if is_local_weights_present:
         st.success("● Engine: PyTorch PEFT Active")
     else:
@@ -892,24 +903,13 @@ with m4:
 st.divider()
 
 # -----------------------------------------------------------------------------
-# Website Navigation: Clean Segmented Symbol Buttons
+# Divided Page Layout: Generator Studio (Left) & Benchmark Scorecard (Right)
 # -----------------------------------------------------------------------------
-active_nav = st.segmented_control(
-    "Main Navigation",
-    options=[
-        "⚡ Generator Studio",
-        "📊 Benchmark Scorecard",
-        "⚙️ Architecture Summary",
-    ],
-    default="⚡ Generator Studio",
-    label_visibility="collapsed",
-)
+col_studio, col_scorecard = st.columns([1, 1], gap="large")
 
-# -----------------------------------------------------------------------------
-# VIEW 1: Live Generator Studio
-# -----------------------------------------------------------------------------
-if active_nav == "⚡ Generator Studio":
-    st.markdown("##### ⚡ Quick Benchmark Presets:")
+with col_studio:
+    st.header("Generator Studio")
+    st.markdown("##### Quick Benchmark Presets:")
     benchmark_choice = st.pills(
         "Select Benchmark Preset",
         options=[
@@ -952,37 +952,30 @@ if active_nav == "⚡ Generator Studio":
 
         # Output Container with Recommended Tip and Topic Diagram
         with st.container(border=True):
-            col_text, col_img = st.columns([1.1, 1.3])
-
-            with col_text:
-                st.markdown(f"### 💡 Recommended Study Tip\n\n> **{tip_text}**")
-
-            with col_img:
-                st.image(
-                    diagram_uri,
-                    caption=f"Concept Architecture: {cleaned_topic.title()}",
-                    width="stretch",
-                )
+            st.markdown(f"#### Recommended Study Tip\n\n> **{tip_text}**")
+            st.image(
+                diagram_uri,
+                caption=f"Concept Architecture: {cleaned_topic.title()}",
+                width="stretch",
+            )
 
         if comparative_data:
-            with st.expander("🔬 Empirical Comparison: Base GPT-2 vs PEFT GPT-2", expanded=True):
+            with st.expander("Empirical Comparison: Base GPT-2 vs PEFT GPT-2", expanded=True):
                 c1, c2 = st.columns(2)
                 with c1:
                     with st.container(border=True):
-                        st.markdown("#### 🔴 Base GPT-2 (Zero-Shot)")
+                        st.markdown("#### Base GPT-2 (Zero-Shot)")
                         st.caption(f'"{comparative_data.get("base", "N/A")}"')
                         st.error("Observed: Repetitive loops, unformatted dumps, non-actionable.")
                 with c2:
                     with st.container(border=True):
-                        st.markdown("#### 🟢 Adapted GPT-2 (Block 11 PEFT)")
+                        st.markdown("#### Adapted GPT-2 (Block 11 PEFT)")
                         st.caption(f'"{comparative_data.get("adapted", "N/A")}"')
                         st.success("Observed: Concise imperative command, active pedagogical learning directive.")
 
-# -----------------------------------------------------------------------------
-# VIEW 2: Benchmark Scorecard (Results Only)
-# -----------------------------------------------------------------------------
-elif active_nav == "📊 Benchmark Scorecard":
-    st.subheader("Held-Out Benchmark Evaluation (12 Unseen Topics)")
+with col_scorecard:
+    st.header("Benchmark Scorecard")
+    st.markdown("##### Held-Out Benchmark Evaluation (12 Unseen Topics)")
 
     benchmark_table_data = [
         {"Topic": "recursion", "Base Score": "2/6", "Adapted Score": "4/6", "Delta": "+2", "Result": "Win", "Highlight": "Converts code fragment into tree visualization"},
@@ -999,10 +992,9 @@ elif active_nav == "📊 Benchmark Scorecard":
         {"Topic": "object-oriented", "Base Score": "1/6", "Adapted Score": "0/6", "Delta": "-1", "Result": "Loss", "Highlight": "Base looped on class definition; adapted drifted"},
     ]
 
-    st.dataframe(benchmark_table_data)
+    st.dataframe(benchmark_table_data, width="stretch")
 
-    st.divider()
-    st.subheader("Training Convergence (Loss Curve)")
+    st.markdown("##### Training Convergence (Loss Curve)")
     loss_data = [
         {"Epoch": 1, "Loss": 4.399},
         {"Epoch": 2, "Loss": 3.771},
@@ -1016,24 +1008,3 @@ elif active_nav == "📊 Benchmark Scorecard":
         {"Epoch": 10, "Loss": 1.227},
     ]
     st.line_chart(data=loss_data, x="Epoch", y="Loss", color="#059669")
-
-# -----------------------------------------------------------------------------
-# VIEW 3: Architecture Summary & Author (No External Links)
-# -----------------------------------------------------------------------------
-elif active_nav == "⚙️ Architecture Summary":
-    c_arch, c_author = st.columns([2, 1])
-    with c_arch:
-        st.subheader("Technical Pipeline Overview")
-        with st.container(border=True):
-            st.markdown(
-                "- **Architecture**: 124M parameter GPT-2 Transformer Decoder.  \n"
-                "- **PEFT Scheme**: Freeze Blocks 0–10; unfreeze Block 11 (`h[-1]`).  \n"
-                "- **Trainable Subset**: Only 7.08M parameters (5.69%), saving 94% memory.  \n"
-                "- **Target Task**: Convert technical terms into single-sentence study tips.  \n"
-                "- **Key Metric**: +50.6% readability improvement over zero-shot base model.  \n"
-                "- **Inference**: Sub-second deterministic greedy decoding."
-            )
-    with c_author:
-        st.subheader("Author")
-        with st.container(border=True):
-            st.markdown("### Vinayak Sharma")
