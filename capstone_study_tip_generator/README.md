@@ -1,6 +1,7 @@
 # Capstone Project: Domain-Adapted Study Tip Generator
 ### Generative AI Creative Solution for Pedagogical Scaffolding
 
+[![Deploy to Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=vsbeginner/genai-lab-assignments&branch=main&mainModule=capstone_study_tip_generator/app.py)
 [![Streamlit](https://img.shields.io/badge/Streamlit-Live%20Demo-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://vsbeginner-genai-study-tip.streamlit.app)
 
 **Course Code**: ETMMGA304 — Generative AI and Its Applications  
@@ -8,6 +9,7 @@
 **Institution**: K.R. Mangalam University  
 **Candidate**: Vinayak Sharma ([@vsbeginner](https://github.com/vsbeginner))  
 **Live Interactive Studio**: [https://vsbeginner-genai-study-tip.streamlit.app](https://vsbeginner-genai-study-tip.streamlit.app)  
+**1-Click Cloud Deployment**: [Deploy via share.streamlit.io](https://share.streamlit.io/deploy?repository=vsbeginner/genai-lab-assignments&branch=main&mainModule=capstone_study_tip_generator/app.py)  
 **Pedagogical Taxonomy**: BTX 4 (Analyze), BTX 5 (Evaluate) & BTX 6 (Create)  
 
 ---
