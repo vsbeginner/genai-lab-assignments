@@ -3,7 +3,6 @@
 # Generative AI & Deep Probabilistic Models
 ### Research Engineering Portfolio & Laboratory Implementations
 
-[![Deploy to Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=vsbeginner/genai-lab-assignments&branch=main&mainModule=capstone_study_tip_generator/app.py)
 [![Streamlit](https://img.shields.io/badge/Streamlit-Live%20Demo-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://vsbeginner-genai-study-tip.streamlit.app)
 [![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.14-3776AB.svg?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.x%20%7C%20CUDA%2012.6-EE4C2C.svg?style=for-the-badge&logo=pytorch&logoColor=white)](https://pytorch.org/)
@@ -16,16 +15,11 @@
 </p>
 
 <p align="center">
-  <a href="https://share.streamlit.io/deploy?repository=vsbeginner/genai-lab-assignments&branch=main&mainModule=capstone_study_tip_generator/app.py" target="_blank">
-    <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Deploy to Streamlit">
-  </a>
-  &nbsp;&nbsp;
   <a href="https://vsbeginner-genai-study-tip.streamlit.app" target="_blank">
     <img src="https://img.shields.io/badge/Streamlit-Live%20Demo-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit Live Demo">
   </a>
   <br><br>
-  <b>🚀 Live Interactive Capstone Studio:</b> <a href="https://vsbeginner-genai-study-tip.streamlit.app">https://vsbeginner-genai-study-tip.streamlit.app</a><br>
-  <b>⚡ 1-Click Streamlit Cloud Deployment:</b> <a href="https://share.streamlit.io/deploy?repository=vsbeginner/genai-lab-assignments&branch=main&mainModule=capstone_study_tip_generator/app.py">Launch on Streamlit Community Cloud</a>
+  <b>🚀 Live Interactive Capstone Studio:</b> <a href="https://vsbeginner-genai-study-tip.streamlit.app">https://vsbeginner-genai-study-tip.streamlit.app</a>
 </p>
 
 ---
@@ -85,8 +79,7 @@ The research and laboratory exercises directly fulfill the four core Course Outc
 | **[Lab 02: GAN](lab2_gan)** | MLP Minimax GAN on Fashion-MNIST ($28 \times 28$) | Alternating gradient updates, gradient detachment, tanh scaling | Discriminator loss settled at **0.481**, Generator loss at **1.717**. Recognizable synthesis progressed from **3/25** (epoch 1) $\to$ **15/25** (epoch 5) $\to$ **19/25** (epoch 10). Fixed-noise seeds demonstrated manifold stability without catastrophic mode collapse. |
 | **[Lab 03: GPT-2](lab3_gpt2)** | Causal LM (`openai-community/gpt2`, 124M params) | Greedy vs Nucleus Sampling, Temperature scaling, Parameter-Efficient Last-Block Fine-Tuning | Greedy decoding suffers repetitive degeneracy. Temperature ($T=1.0$) maximizes lexical novelty but introduces semantic drift. Last-block fine-tuning (5.7% trainable weights) verified pipeline mechanics across held-out computer science topics. |
 | **[Lab 04: Stable Diffusion](lab4_stable_diffusion)** | Latent Diffusion Pipeline (`stable-diffusion-v1-5`, FP16) | Seed-controlled prompt modification, Classifier-Free Guidance (CFG=7.5) | Systematic seed invariance demonstrated that starting noise controls scene geometry and perspective, while prompt modifiers dictate artistic medium and texture. Uncovered prompt adherence vulnerabilities under specific random noise seeds. |
-| **[Capstone Project](capstone_study_tip_generator)** | Fine-Tuned GPT-2 + Streamlit Interactive Application | Domain Adaptation, Zero-Leakage Dataset Curation, Headless App Testing | Adapted model outperformed base model on held-out evaluation (**2.33/6.0** vs **1.67/6.0**), substantially enhancing structural readability and concise pedagogical formatting. Automated test suite verified input edge cases and safety notices.<br><br>[![Deploy to Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=vsbeginner/genai-lab-assignments&branch=main&mainModule=capstone_study_tip_generator/app.py)
-[![Streamlit](https://img.shields.io/badge/Streamlit-Live%20Demo-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://vsbeginner-genai-study-tip.streamlit.app) |
+| **[Capstone Project](capstone_study_tip_generator)** | Fine-Tuned GPT-2 + Streamlit Interactive Application | Domain Adaptation, Zero-Leakage Dataset Curation, Headless App Testing | Adapted model outperformed base model on held-out evaluation (**2.33/6.0** vs **1.67/6.0**), substantially enhancing structural readability and concise pedagogical formatting. Automated test suite verified input edge cases and safety notices.<br><br>[![Streamlit](https://img.shields.io/badge/Streamlit-Live%20Demo-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://vsbeginner-genai-study-tip.streamlit.app) |
 
 ---
 
@@ -280,7 +273,6 @@ python lab4_stable_diffusion.py
 Experience the domain-adapted GPT-2 model in our live recruiter evaluation studio:
 - 🔗 **Public Live Deployment**: [https://vsbeginner-genai-study-tip.streamlit.app](https://vsbeginner-genai-study-tip.streamlit.app)
 
-[![Deploy to Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=vsbeginner/genai-lab-assignments&branch=main&mainModule=capstone_study_tip_generator/app.py)
 [![Streamlit](https://img.shields.io/badge/Streamlit-Live%20Demo-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://vsbeginner-genai-study-tip.streamlit.app)
 
 The application features an intelligent dual-mode engine: it runs immediately out-of-the-box using the pre-computed 52-topic benchmark database, or seamlessly links to local fine-tuned PyTorch checkpoints (`study_tip_gpt2`) if available.
