@@ -903,12 +903,16 @@ with m4:
 st.divider()
 
 # -----------------------------------------------------------------------------
-# Divided Page Layout: Generator Studio (Left) & Benchmark Scorecard (Right)
+# Website Navigation: 2 Buttons (Generator Studio & Benchmark Scorecard)
 # -----------------------------------------------------------------------------
-col_studio, col_scorecard = st.columns([1, 1], gap="large")
+active_view = st.segmented_control(
+    "Navigation",
+    options=["Generator Studio", "Benchmark Scorecard"],
+    default="Generator Studio",
+    label_visibility="collapsed",
+)
 
-with col_studio:
-    st.header("Generator Studio")
+if active_view == "Generator Studio":
     st.markdown("##### Quick Benchmark Presets:")
     benchmark_choice = st.pills(
         "Select Benchmark Preset",
@@ -952,12 +956,17 @@ with col_studio:
 
         # Output Container with Recommended Tip and Topic Diagram
         with st.container(border=True):
-            st.markdown(f"#### Recommended Study Tip\n\n> **{tip_text}**")
-            st.image(
-                diagram_uri,
-                caption=f"Concept Architecture: {cleaned_topic.title()}",
-                width="stretch",
-            )
+            col_text, col_img = st.columns([1.1, 1.3])
+
+            with col_text:
+                st.markdown(f"#### Recommended Study Tip\n\n> **{tip_text}**")
+
+            with col_img:
+                st.image(
+                    diagram_uri,
+                    caption=f"Concept Architecture: {cleaned_topic.title()}",
+                    width="stretch",
+                )
 
         if comparative_data:
             with st.expander("Empirical Comparison: Base GPT-2 vs PEFT GPT-2", expanded=True):
@@ -973,9 +982,8 @@ with col_studio:
                         st.caption(f'"{comparative_data.get("adapted", "N/A")}"')
                         st.success("Observed: Concise imperative command, active pedagogical learning directive.")
 
-with col_scorecard:
-    st.header("Benchmark Scorecard")
-    st.markdown("##### Held-Out Benchmark Evaluation (12 Unseen Topics)")
+elif active_view == "Benchmark Scorecard":
+    st.subheader("Held-Out Benchmark Evaluation (12 Unseen Topics)")
 
     benchmark_table_data = [
         {"Topic": "recursion", "Base Score": "2/6", "Adapted Score": "4/6", "Delta": "+2", "Result": "Win", "Highlight": "Converts code fragment into tree visualization"},
@@ -994,7 +1002,8 @@ with col_scorecard:
 
     st.dataframe(benchmark_table_data, width="stretch")
 
-    st.markdown("##### Training Convergence (Loss Curve)")
+    st.divider()
+    st.subheader("Training Convergence (Loss Curve)")
     loss_data = [
         {"Epoch": 1, "Loss": 4.399},
         {"Epoch": 2, "Loss": 3.771},
