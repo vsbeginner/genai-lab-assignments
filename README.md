@@ -264,20 +264,22 @@ python lab4_stable_diffusion.py
 
 ### 3. Launching the Capstone Demonstration
 
-```bash
-cd ../capstone_study_tip_generator
+The Capstone application features an intelligent dual-mode engine: it runs immediately out-of-the-box using the pre-computed 52-topic benchmark database, or seamlessly links to local fine-tuned PyTorch checkpoints (`study_tip_gpt2`) if available.
 
-# Step 1: Train the domain-adapted GPT-2 model (generates weights in lab_outputs)
+```bash
+cd capstone_study_tip_generator
+
+# (Optional) Retrain domain-adapted GPT-2 model (generates weights in lab_outputs)
 python train_and_generate.py
 
-# Step 2: Compute statistical evaluation and summary tables
+# (Optional) Re-compute statistical evaluation and summary tables
 python score_summary.py
 
-# Step 3: Run automated headless interface tests
+# Run automated headless interface regression tests
 python test_app.py
 
-# Step 4: Launch the interactive Streamlit Web Application
-streamlit run app.py
+# Launch the interactive Streamlit Web Application
+python -m streamlit run app.py
 ```
 
 ---

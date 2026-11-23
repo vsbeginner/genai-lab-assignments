@@ -169,10 +169,24 @@ Aggregated across all 12 held-out evaluation topics:
 
 ### 5.1 Web Application Architecture (`app.py`)
 The demonstration interface is built using Streamlit, featuring:
-- In-memory model caching via `@st.cache_resource` for sub-second inference.
+- **Resilient Dual-Mode Engine**: Operates with zero setup latency using an intelligent pre-computed benchmark lookup engine (all 52 training and held-out pairs), and seamlessly mounts local fine-tuned PyTorch checkpoint (`study_tip_gpt2`) if available.
+- **Fast Execution & Interactive Presets**: Interactive selector with benchmark quick-picks (`recursion`, `SQL joins`, `binary search`, etc.) and side-by-side empirical comparison cards (Base GPT-2 vs Adapted PEFT).
+- In-memory model caching via `@st.cache_data` for sub-second responses.
 - Maximum input character bounding (120 characters) to prevent buffer overflows and prompt injection.
 - Form validation preventing blank or whitespace submissions.
 - Prominent pedagogical disclosure notices and PII warnings.
+
+#### Launching the Application
+```bash
+# Navigate to capstone directory
+cd capstone_study_tip_generator
+
+# Launch Streamlit web app
+python -m streamlit run app.py
+
+# Or execute headless CI/CD test harness
+python test_app.py
+```
 
 ### 5.2 Automated Headless UI Test Harness (`test_app.py`)
 To ensure enterprise CI/CD reliability, the interface was headlessly tested using Streamlit's official `AppTest` framework without requiring a browser:

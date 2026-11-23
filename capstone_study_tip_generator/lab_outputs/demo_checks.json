@@ -2,12 +2,29 @@
   "empty_topic_warning": [
     "Enter a study topic first."
   ],
-  "empty_topic_generated_text": [],
+  "empty_topic_generated_text": [
+    "**Course**: ETMMGA304 Generative AI",
+    "**Architecture**: GPT-2 (124M Parameters)",
+    "**Adaptation**: PEFT on Transformer Block 11 (`h[-1]`)",
+    "**Decoding**: Deterministic Greedy Search"
+  ],
   "recursion": [
-    "Draw a small tree with a root and test it with three children."
+    "### \ud83d\udca1 Recommended Study Tip\n\n> Draw a small tree with a root and test it with three children.",
+    "**\ud83d\udd34 Raw Pre-Trained GPT-2 (Zero-Shot)**",
+    "**\ud83d\udfe2 Fine-Tuned Model (Block 11 PEFT)**",
+    "**Course**: ETMMGA304 Generative AI",
+    "**Architecture**: GPT-2 (124M Parameters)",
+    "**Adaptation**: PEFT on Transformer Block 11 (`h[-1]`)",
+    "**Decoding**: Deterministic Greedy Search"
   ],
   "SQL joins": [
-    "List the three columns you need to join the table."
+    "### \ud83d\udca1 Recommended Study Tip\n\n> List the three columns you need to join the table.",
+    "**\ud83d\udd34 Raw Pre-Trained GPT-2 (Zero-Shot)**",
+    "**\ud83d\udfe2 Fine-Tuned Model (Block 11 PEFT)**",
+    "**Course**: ETMMGA304 Generative AI",
+    "**Architecture**: GPT-2 (124M Parameters)",
+    "**Adaptation**: PEFT on Transformer Block 11 (`h[-1]`)",
+    "**Decoding**: Deterministic Greedy Search"
   ],
   "whitespace_only_warning": [
     "Enter a study topic first."
